@@ -1,6 +1,6 @@
 [![ROS2](https://github.com/IMRCLab/motion_capture_tracking/actions/workflows/ROS.yml/badge.svg?branch=ros2)](https://github.com/IMRCLab/motion_capture_tracking/actions/workflows/ROS.yml)
 
-# motion_capture_tracking
+# motion_capture_tracking (MARIAM Version)
 
 This repository is a ROS 2 package that can receive data from various motion capture systems:
 
