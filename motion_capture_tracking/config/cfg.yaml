@@ -1,9 +1,9 @@
 /motion_capture_tracking:
   ros__parameters:
     # one of "optitrack", "optitrack_closed_source", "vicon", "qualisys", "nokov", "vrpn", "motionanalysis"
-    type: "optitrack"
+    type: "vicon"
     # Specify the hostname or IP of the computer running the motion capture software
-    hostname: "130.149.82.37"
+    hostname: "192.168.1.2"
 
     # The information will always be broadcasted via tf2
     # Specify additional settings for the /poses topic here
@@ -30,6 +30,19 @@
         offset: [0.0, -0.01, -0.04]
         points:
           p0: [0.0177184,0.0139654,0.0557585]
+      nocap_deck:
+        offset: [0.0, 0.0, -0.01]
+        points: 
+          p0: [-0.005, -0.005, -0.0]
+          p1: [0.03, 0.00, 0.00]
+          p2: [-0.03, 0.00, 0.00]
+          p3: [0.0, 0.03, 0.00]
+      ross_formation:
+        offset: [0.0, 0.0, 0.0]
+        points: # x y z
+          p0: [0.0, 0.0, 0.00]
+          p1: [0.105, 0.108, 0.0]
+          p2: [0.04, -0.075, 0.35]
       medium_frame:
         offset: [0.0, 0.0, -0.03]
         points:
@@ -59,6 +72,6 @@
     rigid_bodies:
       crazyflie:
         initial_position: [0,0,0]
-        marker: "default"
+        marker: "ross_formation"
         # marker: "default_single_marker"
         dynamics: "default"
